@@ -1,0 +1,8 @@
+version: "3.4"
+services:
+  document_process:
+    image: tekn0ir/nginx-stream:latest
+    volumes:
+      - ./stream.conf:/opt/nginx/stream.conf.d/stream.conf
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
